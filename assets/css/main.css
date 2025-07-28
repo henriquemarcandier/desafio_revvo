@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that can't be done with Tailwind */
+:root {
+  --color-primary: #2563eb; /* blue-600 */
+  --color-dark: #1e293b;    /* slate-800 */
+}
+
+/* Custom base styles */
+body {
+  @apply antialiased text-slate-800 bg-gray-50;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom components */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium transition-colors;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Custom utility classes */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+/* Swiper overrides */
+.swiper-pagination-bullet {
+  @apply bg-white opacity-80;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white opacity-100;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  @apply fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm;
+}
+
+/* Form styles */
+.input-field {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}

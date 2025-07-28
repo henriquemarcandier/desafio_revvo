@@ -1,34 +1,51 @@
-<?php require_once('cabecalho.php');
-$sql = "SELECT * FROM cursos";
-$queryCursos = mysqli_query($con, $sql);
-$rowsCursos = mysqli_num_rows($queryCursos);
-$sql = "SELECT * FROM slideshow";
-$querySlideshow = mysqli_query($con, $sql);
-$rowsSlideshow = mysqli_num_rows($querySlideshow);
+<?php
+
+require 'includes/auth-check.php';
+$pageTitle = "Dashboard Admin";
+require '../includes/db.php';
+include 'includes/header.php';
+
+try {
+    // Contar cursos
+    $stmt = $pdo->query("SELECT COUNT(*) as total FROM cursos");
+    $totalCursos = $stmt->fetch()['total'];
+    
+    // Contar slides
+    $stmt = $pdo->query("SELECT COUNT(*) as total FROM slideshow");
+    $totalSlides = $stmt->fetch()['total'];
+} catch (PDOException $e) {
+    die("Erro ao carregar dados: " . $e->getMessage());
+}
 ?>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
-                    <div class="flex justify-between mb-6">
-                        <div>
-                            <div class="flex items-center mb-1">
-                                <div class="text-2xl font-semibold"><?=$rowsCursos?></div>
-                            </div>
-                            <div class="text-sm font-medium text-gray-400">Cursos</div>
-                        </div>
-                    </div>
-                    <a href="cursos.php" class="text-[#f84525] font-medium text-sm hover:text-red-800">Ver</a>
-                </div>
-                <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
-                    <div class="flex justify-between mb-4">
-                        <div>
-                            <div class="flex items-center mb-1">
-                                <div class="text-2xl font-semibold"><?=$rowsSlideshow?></div>
-                            </div>
-                            <div class="text-sm font-medium text-gray-400">Slideshow</div>
-                        </div>
-                    </div>
-                    <a href="slideshow.php" class="text-[#f84525] font-medium text-sm hover:text-red-800">Ver</a>
-                </div>
+
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-2xl font-bold text-gray-800 mb-8">Dashboard Administrativo</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Cursos</h2>
+            <p class="text-3xl font-bold text-blue-600"><?= $totalCursos ?></p>
+            <div class="mt-4">
+                <a href="cursos/index.php" class="text-blue-600 hover:text-blue-800">Gerenciar Cursos →</a>
             </div>
         </div>
-        <?php require_once('rodape.php');?>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Slideshow</h2>
+            <p class="text-3xl font-bold text-blue-600"><?= $totalSlides ?></p>
+            <div class="mt-4">
+                <a href="slideshow/index.php" class="text-blue-600 hover:text-blue-800">Gerenciar Slides →</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Ações Rápidas</h2>
+        <div class="flex flex-wrap gap-4">
+            <a href="cursos/criar.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Novo Curso</a>
+            <a href="slideshow/criar.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Novo Slide</a>
+        </div>
+    </div>
+</div>
+
+<?php include 'includes/footer.php'; ?>
