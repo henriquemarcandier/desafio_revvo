@@ -32,11 +32,11 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-blue-400">Links Rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="/" class="text-slate-300 hover:text-white transition-colors">Início</a></li>
-                        <li><a href="/cursos" class="text-slate-300 hover:text-white transition-colors">Cursos</a></li>
-                        <li><a href="/sobre" class="text-slate-300 hover:text-white transition-colors">Sobre Nós</a></li>
-                        <li><a href="/faq" class="text-slate-300 hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="/politica-de-privacidade" class="text-slate-300 hover:text-white transition-colors">Política de Privacidade</a></li>
+                        <li><a href="<?=$url_site?>" class="text-slate-300 hover:text-white transition-colors">Início</a></li>
+                        <li><a href="<?=$url_site?>cursos" class="text-slate-300 hover:text-white transition-colors">Cursos</a></li>
+                        <li><a href="<?=$url_site?>sobre" class="text-slate-300 hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="<?=$url_site?>faq" class="text-slate-300 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="<?=$url_site?>politica-de-privacidade" class="text-slate-300 hover:text-white transition-colors">Política de Privacidade</a></li>
                     </ul>
                 </div>
 
@@ -74,6 +74,53 @@
             </div>
         </div>
     </footer>
+
+    <!-- Inclua isso no seu index.php, preferencialmente antes do fechamento do body -->
+<div id="welcomeModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black bg-opacity-75">
+    <div class="bg-white rounded-xl max-w-2xl w-full overflow-hidden shadow-2xl">
+        <img src="assets/images/slideshow/slide1.jpg">        
+        <!-- Modal Content -->
+        <div class="p-6 md:p-8">
+            <div class="text-center mb-6">
+                <p class="mb-2">Aenean lacinia bibendum socis natusque persitibus</p>
+                <p class="mb-4">nascetur ridiculus musi lekar ac, vestibulum at et</p>
+            </div>
+            
+            <div class="flex justify-center mb-8">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold transition-colors">
+                    Inscreva-se
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Mostrar modal apenas no primeiro acesso
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('welcomeModal');
+    const hasSeenModal = localStorage.getItem('hasSeenLeoModal');
+    
+    if (!hasSeenModal) {
+        modal.classList.remove('hidden');
+        localStorage.setItem('hasSeenLeoModal', 'true');
+    }
+    
+    // Fechar modal ao clicar fora do conteúdo
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+    
+    // Adicionar botão de fechar (opcional)
+    const closeButton = document.createElement('button');
+    closeButton.innerHTML = '&times;';
+    closeButton.className = 'absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-3xl';
+    closeButton.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.querySelector('.bg-white').prepend(closeButton);
+});
+</script>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" class="fixed bottom-6 right-6 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all opacity-0 invisible">

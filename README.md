@@ -1,6 +1,6 @@
 # Desafio Revvo - Plataforma de Cursos Online
 
-![LEO Logo](assets/images/logo.svg)
+![LEO Logo]
 
 Plataforma de cursos online desenvolvida como parte do processo seletivo para a Revvo.
 
@@ -58,12 +58,12 @@ Este projeto consiste em uma plataforma de cursos online com:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/desafio_revvo.git
+   git clone https://github.com/henriquemarcandier/desafio_revvo.git
    cd desafio_revvo
 
    Configure o banco de dados:
 
-    Importe o arquivo database.sql para seu MySQL
+    Importe o arquivo desafio_revvo.sql para seu MySQL
 
     Configure as credenciais em includes/db.php
 
@@ -100,7 +100,6 @@ desafio_revvo/
 │   ├── cursos/       # CRUD de cursos
 │   └── slideshow/    # CRUD do slideshow
 ├── index.php         # Página inicial
-├── cursos.php        # Listagem de cursos
 ├── gulpfile.js       # Config do Gulp
 ├── database.sql      # Estrutura do banco
 └── README.md         # Este arquivo
@@ -120,10 +119,10 @@ Painel Administrativo:
 Este projeto foi desenvolvido como parte de um processo seletivo e não possui licença aberta.
 ✉️ Contato
 
-Desenvolvedor: [Seu Nome]
-Email: [seu-email@exemplo.com]
-LinkedIn: [URL do seu LinkedIn]
-GitHub: [URL do seu GitHub]
+Desenvolvedor: [Henrique Marcandier]
+Email: [henrique.marcandier@gmail.com]
+LinkedIn: [[URL do seu LinkedIn](https://www.linkedin.com/in/henrique-marcandier-25492518/)]
+GitHub: [[URL do seu GitHub](https://github.com/henriquemarcandier/)]
 text
 
 
@@ -159,7 +158,3 @@ Este README fornece todas as informações necessárias para:
 - Navegar na estrutura de arquivos
 - Testar as funcionalidades
 - Entrar em contato com o desenvolvedor
-
-Você pode personalizar com suas informações específicas antes de enviar o desafio.
-
-New chat

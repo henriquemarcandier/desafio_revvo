@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('../includes/db.php');
 $pageTitle = "Login Admin";
 include '../includes/header.php';
 ?>

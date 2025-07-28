@@ -20,7 +20,7 @@ $pageTitle = $pageTitle ?? 'Admin';
                     </div>
                 </div>
                 <div class="flex items-center">
-                    <a href="logout.php" class="text-gray-500 hover:text-gray-700">
+                    <a href="<?=$url_site?>admin/logout.php" class="text-gray-500 hover:text-gray-700">
                         <i class="fas fa-sign-out-alt mr-1"></i> Sair
                     </a>
                 </div>
