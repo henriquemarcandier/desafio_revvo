@@ -63,7 +63,7 @@ Este projeto consiste em uma plataforma de cursos online com:
 
    Configure o banco de dados:
 
-    Importe o arquivo desafio_revvo.sql para seu MySQL
+    Importe o arquivo revvo_desafio.sql para seu MySQL
 
     Configure as credenciais em includes/db.php
 
