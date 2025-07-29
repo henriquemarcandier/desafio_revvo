@@ -89,7 +89,7 @@ cd desafio_revvo
 Configure o banco de dados:
 bash
 
-mysql -u username -p database_name < database.sql
+mysql -u username -p database_name < revvo_desafio.sql
 
 Configure as credenciais em includes/db.php
 

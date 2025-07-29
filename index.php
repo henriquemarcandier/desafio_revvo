@@ -58,7 +58,7 @@ include 'includes/header.php';
                             <div class="max-w-2xl text-white">
                                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Bem-vindo à LEO</h2>
                                 <p class="text-lg mb-6">Aenean lacinia bibendum nulla sed consectetur.</p>
-                                <a href="/cursos" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                                <a href="/cursos.php" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                                     VER CURSOS
                                 </a>
                             </div>
@@ -122,7 +122,7 @@ include 'includes/header.php';
             </div>
 
             <div class="text-center mt-8">
-                <a href="cursos" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                <a href="cursos.php" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
                     Ver Todos os Cursos
                 </a>
             </div>

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2025-07-28 23:13:43
+Date: 2025-07-28 23:36:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -33,7 +33,7 @@ CREATE TABLE `cursos` (
 -- ----------------------------
 -- Records of cursos
 -- ----------------------------
-INSERT INTO `cursos` VALUES ('1', 'PELLENTESQUE MALESUADA', 'Curabular blandit tempus porttitor. Nulla Visae elit libero, a pharetra augue.', '', '/cursos/1', '1', '2025-07-26 22:20:09', '2025-07-28 22:54:52');
+INSERT INTO `cursos` VALUES ('1', 'PELLENTESQUE MALESUADA', 'Curabular blandit tempus porttitor. Nulla Visae elit libero, a pharetra augue.', 'curso1.jpg', '/cursos/1', '1', '2025-07-26 22:20:09', '2025-07-28 23:27:50');
 INSERT INTO `cursos` VALUES ('2', 'EGESTAS TORTOR VULPUTATE', 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.', 'curso2.jpg', '/cursos/2', '1', '2025-07-26 22:20:09', '2025-07-26 22:20:09');
 INSERT INTO `cursos` VALUES ('3', 'INSCREVA-SE', 'Viste elit libero, a pharetra augue.', 'curso3.jpg', '/cursos/3', '1', '2025-07-26 22:20:09', '2025-07-26 23:58:45');
 
@@ -60,7 +60,7 @@ CREATE TABLE `slideshow` (
 -- ----------------------------
 INSERT INTO `slideshow` VALUES ('1', 'LOREM IPSUM', 'Aenean lacinia bibendum socis natusque persitibus nascetur ridiculus musi lekar ac, vestibulum at et', 'slide1.jpg', '', 'VER CURSO', '1', '1', '2025-07-26 22:20:09', '2025-07-28 22:56:57');
 INSERT INTO `slideshow` VALUES ('2', 'CURSOS EM DESTAQUE', 'Confira nossos principais cursos disponíveis para você', 'slide2.jpg', 'cursos', 'CONHECER', '2', '1', '2025-07-26 22:20:09', '2025-07-26 23:05:42');
-INSERT INTO `slideshow` VALUES ('3', 'PROMOCAO ESPECIAL', 'Aproveite nossas condicoes exclusivas por tempo limitado', '', '', 'APROVEITAR', '3', '1', '2025-07-26 22:20:09', '2025-07-28 22:57:59');
+INSERT INTO `slideshow` VALUES ('3', 'PROMOCAO ESPECIAL', 'Aproveite nossas condicoes exclusivas por tempo limitado', 'slide3.jpg', '', 'APROVEITAR', '3', '1', '2025-07-26 22:20:09', '2025-07-28 23:27:23');
 
 -- ----------------------------
 -- Table structure for `usuarios`
