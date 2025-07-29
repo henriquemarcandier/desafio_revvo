@@ -160,12 +160,17 @@ desafio_revvo/
 📝 Licença
 
 Este projeto foi desenvolvido como parte de um processo seletivo e não possui licença aberta.
+
 ✉️ Contato
 
 Desenvolvedor: Henrique Marcandier
+
 Email: henrique.marcandier@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/henrique-marcandier-25492518/
+
 GitHub: https://github.com/henriquemarcandier/
+
 Principais Atualizações:
 
     Adicionada seção "Ambiente de Testes Online" com link para o subdomínio de testes
