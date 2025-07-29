@@ -120,9 +120,9 @@ Este projeto foi desenvolvido como parte de um processo seletivo e não possui l
 ✉️ Contato
 
 Desenvolvedor: [Henrique Marcandier]
-Email: [henrique.marcandier@gmail.com]
-LinkedIn: [[URL do seu LinkedIn](https://www.linkedin.com/in/henrique-marcandier-25492518/)]
-GitHub: [[URL do seu GitHub](https://github.com/henriquemarcandier/)]
+Email: [henrique.marcandier@gmail.com](henrique.marcandier@gmail.com)
+LinkedIn: [[URL do LinkedIn](https://www.linkedin.com/in/henrique-marcandier-25492518/)]
+GitHub: [[URL do GitHub](https://github.com/henriquemarcandier/)]
 text
 
 
