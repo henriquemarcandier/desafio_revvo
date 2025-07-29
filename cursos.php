@@ -55,7 +55,7 @@ include 'includes/header.php';
                         <!-- Course Image -->
                         <div class="h-48 bg-gray-200 overflow-hidden">
                             <?php if ($curso['imagem']): ?>
-                                <img src="/assets/images/cursos/<?= htmlspecialchars($curso['imagem']) ?>" alt="<?= htmlspecialchars($curso['titulo']) ?>" class="w-full h-full object-cover">
+                                <img src="assets/images/cursos/<?= htmlspecialchars($curso['imagem']) ?>" alt="<?= htmlspecialchars($curso['titulo']) ?>" class="w-full h-full object-cover">
                             <?php else: ?>
                                 <div class="w-full h-full flex items-center justify-center bg-blue-600 text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">

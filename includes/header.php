@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="<?=$url_site?>assets/images/favicon.ico">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,7 +36,7 @@
     </script>
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="<?=$url_site?>assets/css/main.css">
 </head>
 <body class="font-sans bg-gray-50 text-slate-800 antialiased">
     <!-- Skip to Content Link (Accessibility) -->
@@ -59,18 +59,27 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="<?=$url_site?>" class="text-sm font-medium hover:text-primary transition-colors <?php echo basename($_SERVER['PHP_SELF']) === 'index.php' ? 'text-primary' : 'text-slate-600' ?>">Início</a>
-                    <a href="<?=$url_site?>cursos" class="text-sm font-medium hover:text-primary transition-colors <?php echo basename($_SERVER['PHP_SELF']) === 'cursos.php' ? 'text-primary' : 'text-slate-600' ?>">Cursos</a>
-                    <a href="<?=$url_site?>sobre" class="text-sm font-medium hover:text-primary transition-colors">Sobre</a>
-                    <a href="<?=$url_site?>contato" class="text-sm font-medium hover:text-primary transition-colors">Contato</a>
+                    <a href="<?=$url_site?>cursos.php" class="text-sm font-medium hover:text-primary transition-colors <?php echo basename($_SERVER['PHP_SELF']) === 'cursos.php' ? 'text-primary' : 'text-slate-600' ?>">Cursos</a>
+                    <a href="<?=$url_site?>sobre.php" class="text-sm font-medium hover:text-primary transition-colors">Sobre</a>
+                    <a href="<?=$url_site?>contato.php" class="text-sm font-medium hover:text-primary transition-colors">Contato</a>
                 </nav>
-                <!-- Auth Buttons (Desktop) -->
+                <?php if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_user_id']){?>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <?=$_SESSION['admin_user_name']?> 
+                    <a href="<?=$url_site?>admin/index.php" class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors shadow-sm">
+                        Ver Admin
+                    </a>
+                </div>
+                <?php } 
+                else{?><!-- Auth Buttons (Desktop) -->
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="<?=$url_site?>admin/login.php" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Entrar</a>
                     <a href="<?=$url_site?>admin/registrar.php" class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors shadow-sm">
                         Criar conta
                     </a>
-                </div>
-
+                </div>   
+                <?php }?>
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-slate-600 hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

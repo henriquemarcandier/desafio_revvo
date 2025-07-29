@@ -1,4 +1,5 @@
 <?php
+@session_start();
 // includes/db.php
 $host = 'localhost';
 $dbname = 'revvo_desafio';

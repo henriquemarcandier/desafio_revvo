@@ -33,10 +33,10 @@
                     <h3 class="text-lg font-semibold mb-4 text-blue-400">Links Rápidos</h3>
                     <ul class="space-y-2">
                         <li><a href="<?=$url_site?>" class="text-slate-300 hover:text-white transition-colors">Início</a></li>
-                        <li><a href="<?=$url_site?>cursos" class="text-slate-300 hover:text-white transition-colors">Cursos</a></li>
-                        <li><a href="<?=$url_site?>sobre" class="text-slate-300 hover:text-white transition-colors">Sobre Nós</a></li>
-                        <li><a href="<?=$url_site?>faq" class="text-slate-300 hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="<?=$url_site?>politica-de-privacidade" class="text-slate-300 hover:text-white transition-colors">Política de Privacidade</a></li>
+                        <li><a href="<?=$url_site?>cursos.php" class="text-slate-300 hover:text-white transition-colors">Cursos</a></li>
+                        <li><a href="<?=$url_site?>sobre.php" class="text-slate-300 hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="<?=$url_site?>faq.php" class="text-slate-300 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="<?=$url_site?>politica-de-privacidade.php" class="text-slate-300 hover:text-white transition-colors">Política de Privacidade</a></li>
                     </ul>
                 </div>
 

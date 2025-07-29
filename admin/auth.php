@@ -13,6 +13,7 @@ try {
     if ($user && $password == $user['senha']) {
         $_SESSION['admin_logged_in'] = true;
         $_SESSION['admin_user_id'] = $user['id'];
+        $_SESSION['admin_user_name'] = $user['nome'];
         $_SESSION['admin_user_email'] = $user['email'];
         header('Location: index.php');
         exit;
