@@ -8,7 +8,7 @@ Plataforma de cursos online desenvolvida como parte do processo seletivo para a 
 
 Este projeto consiste em uma plataforma de cursos online com:
 
-- Páginas responsivas (home, cursos)
+- Páginas responsivas (home, cursos, sobre, contato, faq e política de privacidade)
 - Sistema de CRUD para cursos e slideshow
 - Modal de primeiro acesso
 - Painel administrativo básico
