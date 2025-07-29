@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2025-07-28 23:36:41
+Date: 2025-07-28 23:48:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -59,7 +59,7 @@ CREATE TABLE `slideshow` (
 -- Records of slideshow
 -- ----------------------------
 INSERT INTO `slideshow` VALUES ('1', 'LOREM IPSUM', 'Aenean lacinia bibendum socis natusque persitibus nascetur ridiculus musi lekar ac, vestibulum at et', 'slide1.jpg', '', 'VER CURSO', '1', '1', '2025-07-26 22:20:09', '2025-07-28 22:56:57');
-INSERT INTO `slideshow` VALUES ('2', 'CURSOS EM DESTAQUE', 'Confira nossos principais cursos disponíveis para você', 'slide2.jpg', 'cursos', 'CONHECER', '2', '1', '2025-07-26 22:20:09', '2025-07-26 23:05:42');
+INSERT INTO `slideshow` VALUES ('2', 'CURSOS EM DESTAQUE', 'Confira nossos principais cursos disponiveis para voce', 'slide2.jpg', 'cursos.php', 'CONHECER', '2', '1', '2025-07-26 22:20:09', '2025-07-28 23:45:08');
 INSERT INTO `slideshow` VALUES ('3', 'PROMOCAO ESPECIAL', 'Aproveite nossas condicoes exclusivas por tempo limitado', 'slide3.jpg', '', 'APROVEITAR', '3', '1', '2025-07-26 22:20:09', '2025-07-28 23:27:23');
 
 -- ----------------------------
