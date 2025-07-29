@@ -10,12 +10,11 @@ $dados = [
     'ordem' => $_POST['ordem'] ?? 1,
     'ativo' => isset($_POST['ativo']) ? 1 : 0
 ];
-
+$diretorioDestino = '../../assets/images/slideshow/';
 // Processar upload de imagem
 if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
     $extensao = pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
     $nomeArquivo = uniqid() . '.' . $extensao;
-    $diretorioDestino = '../../assets/images/slideshow/';
     
     if (move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorioDestino . $nomeArquivo)) {
         $dados['imagem'] = $nomeArquivo;
@@ -42,6 +41,7 @@ if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
         if ($slide && $slide['imagem'] && file_exists($diretorioDestino . $slide['imagem'])) {
             unlink($diretorioDestino . $slide['imagem']);
         }
+        $dados['imagem'] = "";
     }
 }
 

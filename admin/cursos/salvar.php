@@ -20,6 +20,21 @@ if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
     }
 }
 
+elseif (isset($_POST['remover_imagem'])) {
+    // Remover imagem existente
+    $dados['imagem'] = null;
+    if (isset($_POST['id']) && !empty($_POST['id'])) {
+        $stmt = $pdo->prepare("SELECT imagem FROM cursos WHERE id = ?");
+        $stmt->execute([$_POST['id']]);
+        $slide = $stmt->fetch();
+        
+        if ($slide && $slide['imagem'] && file_exists($diretorioDestino . $slide['imagem'])) {
+            unlink($diretorioDestino . $slide['imagem']);
+        }
+        $dados['imagem'] = "";
+    }
+}
+
 try {
     if (isset($_POST['id']) && !empty($_POST['id'])) {
         // Edição
