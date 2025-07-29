@@ -1,8 +1,7 @@
 Desafio Revvo - Plataforma de Cursos Online
 
-![LEO Logo]
-
 Plataforma de cursos online desenvolvida como parte do processo seletivo para a Revvo.
+
 📌 Visão Geral
 
 Este projeto consiste em uma plataforma de cursos online com:
@@ -68,6 +67,7 @@ Este projeto consiste em uma plataforma de cursos online com:
         Composer (para possíveis dependências)
 
 🚀 Como Executar o Projeto
+
 Pré-requisitos
 
     PHP 7.4+
@@ -81,37 +81,35 @@ Pré-requisitos
 Instalação
 
     Clone o repositório:
-    bash
 
 git clone https://github.com/henriquemarcandier/desafio_revvo.git
+
 cd desafio_revvo
 
 Configure o banco de dados:
-bash
 
 mysql -u username -p database_name < revvo_desafio.sql
 
 Configure as credenciais em includes/db.php
 
 Instale as dependências frontend:
-bash
 
 npm install
 
 Inicie o servidor de desenvolvimento:
-bash
 
 # Usando o servidor embutido do PHP
+
 php -S localhost:8000
 
 Acesse no navegador:
-text
 
     http://localhost:8000
 
 🌐 Ambiente de Testes Online
 
 O projeto está disponível para testes em:
+
 🔹 URL de Testes: https://desafiorevvo.bhcommerce.com.br
 
 Credenciais do Painel Admin:
