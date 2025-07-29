@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Configurar e-mail
-    $para = "contato@leocursos.com";
+    $para = "henrique.marcandier@gmail.com";
     $titulo = "Contato via site - " . $assunto;
     
     $corpo = "Nome: $nome\n";
