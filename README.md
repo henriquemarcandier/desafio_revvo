@@ -18,25 +18,25 @@ Este projeto consiste em uma plataforma de cursos online com:
 
     Frontend:
 
-        Layout responsivo com Tailwind CSS
+        - Layout responsivo com Tailwind CSS
 
-        Componentes reutilizáveis (header, footer, modal)
+        - Componentes reutilizáveis (header, footer, modal)
 
-        Slider hero com Swiper.js
+        - Slider hero com Swiper.js
 
-        Cards de cursos dinâmicos
+        - Cards de cursos dinâmicos
+
+        - **Observação:** A navegação para páginas individuais de cursos não está implementada
 
     Backend:
 
-        CRUD completo para cursos
+        - CRUD completo para cursos
 
-        CRUD para slideshow (banner principal)
+        - CRUD para slideshow (banner principal)
 
-        CRUD para páginas estáticas
+        - Autenticação básica
 
-        Autenticação básica
-
-        Modal de primeiro acesso com cookie
+        - Modal de primeiro acesso com cookie
 
 🛠 Tecnologias Utilizadas
 
