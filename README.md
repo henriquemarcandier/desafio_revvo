@@ -122,31 +122,53 @@ Credenciais do Painel Admin:
 
     Senha: admin123
 
+
 🗂 Estrutura de Arquivos
-text
 
 desafio_revvo/
+
 ├── assets/
+
 │   ├── css/          # Estilos compilados
+
 │   ├── js/           # JavaScript
+
 │   └── images/       # Imagens do site
+
 ├── includes/
+
 │   ├── db.php        # Conexão com banco
+
 │   ├── header.php    # Cabeçalho
+
 │   ├── footer.php    # Rodapé
+
 │   └── modal.php     # Modal de primeiro acesso
+
 ├── admin/
+
 │   ├── cursos/       # CRUD de cursos
+
 │   ├── slideshow/    # CRUD do slideshow
+
 │   └── paginas/      # CRUD de páginas estáticas
+
 ├── index.php         # Página inicial
+
 ├── cursos.php        # Listagem de cursos
+
 ├── sobre.php         # Página institucional
+
 ├── contato.php       # Formulário de contato
+
 ├── faq.php           # Perguntas frequentes
+
 ├── privacidade.php   # Política de privacidade
+
 ├── gulpfile.js       # Config do Gulp
+
 ├── database.sql      # Estrutura do banco
+
 └── README.md         # Este arquivo
 
 🔒 Segurança
