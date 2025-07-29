@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2025-07-28 22:59:26
+Date: 2025-07-28 23:13:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,28 +36,6 @@ CREATE TABLE `cursos` (
 INSERT INTO `cursos` VALUES ('1', 'PELLENTESQUE MALESUADA', 'Curabular blandit tempus porttitor. Nulla Visae elit libero, a pharetra augue.', '', '/cursos/1', '1', '2025-07-26 22:20:09', '2025-07-28 22:54:52');
 INSERT INTO `cursos` VALUES ('2', 'EGESTAS TORTOR VULPUTATE', 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.', 'curso2.jpg', '/cursos/2', '1', '2025-07-26 22:20:09', '2025-07-26 22:20:09');
 INSERT INTO `cursos` VALUES ('3', 'INSCREVA-SE', 'Viste elit libero, a pharetra augue.', 'curso3.jpg', '/cursos/3', '1', '2025-07-26 22:20:09', '2025-07-26 23:58:45');
-
--- ----------------------------
--- Table structure for `paginas`
--- ----------------------------
-DROP TABLE IF EXISTS `paginas`;
-CREATE TABLE `paginas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(255) NOT NULL,
-  `slug` varchar(255) NOT NULL,
-  `conteudo` longtext NOT NULL,
-  `meta_descricao` varchar(255) DEFAULT NULL,
-  `status` enum('ativo','inativo') DEFAULT 'ativo',
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `slug` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- ----------------------------
--- Records of paginas
--- ----------------------------
-INSERT INTO `paginas` VALUES ('1', 'Téste', 'teste', '', 'uai', 'ativo', '2025-07-28 22:13:40', '2025-07-28 22:13:40');
 
 -- ----------------------------
 -- Table structure for `slideshow`

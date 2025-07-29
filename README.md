@@ -1,71 +1,97 @@
-# Desafio Revvo - Plataforma de Cursos Online
+Desafio Revvo - Plataforma de Cursos Online
 
 ![LEO Logo]
 
 Plataforma de cursos online desenvolvida como parte do processo seletivo para a Revvo.
-
-## 📌 Visão Geral
+📌 Visão Geral
 
 Este projeto consiste em uma plataforma de cursos online com:
 
-- Páginas responsivas (home, cursos, sobre, contato, faq e política de privacidade)
-- Sistema de CRUD para cursos e slideshow
-- Modal de primeiro acesso
-- Painel administrativo básico
+    Páginas responsivas (home, cursos, sobre, contato, faq e política de privacidade)
 
-## ✨ Funcionalidades
+    Sistema de CRUD para cursos e slideshow
 
-- **Frontend:**
-  - Layout responsivo com Tailwind CSS
-  - Componentes reutilizáveis (header, footer, modal)
-  - Slider hero com Swiper.js
-  - Cards de cursos dinâmicos
+    Modal de primeiro acesso
 
-- **Backend:**
-  - CRUD completo para cursos
-  - CRUD para slideshow (banner principal)
-  - Autenticação básica
-  - Modal de primeiro acesso com cookie
+    Painel administrativo completo
 
-## 🛠 Tecnologias Utilizadas
+✨ Funcionalidades
 
-- **Frontend:**
-  - HTML5 semântico
-  - Tailwind CSS
-  - JavaScript vanilla
-  - Swiper.js (slider)
+    Frontend:
 
-- **Backend:**
-  - PHP 7.4+ (sem frameworks)
-  - MySQL/MariaDB
-  - PDO para conexão com banco
+        Layout responsivo com Tailwind CSS
 
-- **Ferramentas:**
-  - Git para controle de versão
-  - Gulp para automatização
-  - Composer (para possíveis dependências)
+        Componentes reutilizáveis (header, footer, modal)
 
-## 🚀 Como Executar o Projeto
+        Slider hero com Swiper.js
 
-### Pré-requisitos
+        Cards de cursos dinâmicos
 
-- PHP 7.4+
-- MySQL/MariaDB
-- Node.js (para Gulp)
-- Composer (opcional)
+    Backend:
 
-### Instalação
+        CRUD completo para cursos
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/henriquemarcandier/desafio_revvo.git
-   cd desafio_revvo
+        CRUD para slideshow (banner principal)
 
-   Configure o banco de dados:
+        CRUD para páginas estáticas
 
-    Importe o arquivo revvo_desafio.sql para seu MySQL
+        Autenticação básica
 
-    Configure as credenciais em includes/db.php
+        Modal de primeiro acesso com cookie
+
+🛠 Tecnologias Utilizadas
+
+    Frontend:
+
+        HTML5 semântico
+
+        Tailwind CSS
+
+        JavaScript vanilla
+
+        Swiper.js (slider)
+
+    Backend:
+
+        PHP 7.4+ (sem frameworks)
+
+        MySQL/MariaDB
+
+        PDO para conexão com banco
+
+    Ferramentas:
+
+        Git para controle de versão
+
+        Gulp para automatização
+
+        Composer (para possíveis dependências)
+
+🚀 Como Executar o Projeto
+Pré-requisitos
+
+    PHP 7.4+
+
+    MySQL/MariaDB
+
+    Node.js (para Gulp)
+
+    Composer (opcional)
+
+Instalação
+
+    Clone o repositório:
+    bash
+
+git clone https://github.com/henriquemarcandier/desafio_revvo.git
+cd desafio_revvo
+
+Configure o banco de dados:
+bash
+
+mysql -u username -p database_name < database.sql
+
+Configure as credenciais em includes/db.php
 
 Instale as dependências frontend:
 bash
@@ -83,6 +109,19 @@ text
 
     http://localhost:8000
 
+🌐 Ambiente de Testes Online
+
+O projeto está disponível para testes em:
+🔹 URL de Testes: https://desafiorevvo.bhcommerce.com.br
+
+Credenciais do Painel Admin:
+
+    URL: /admin
+
+    Usuário: admin@revvo.com
+
+    Senha: admin123
+
 🗂 Estrutura de Arquivos
 text
 
@@ -98,63 +137,45 @@ desafio_revvo/
 │   └── modal.php     # Modal de primeiro acesso
 ├── admin/
 │   ├── cursos/       # CRUD de cursos
-│   └── slideshow/    # CRUD do slideshow
+│   ├── slideshow/    # CRUD do slideshow
+│   └── paginas/      # CRUD de páginas estáticas
 ├── index.php         # Página inicial
+├── cursos.php        # Listagem de cursos
+├── sobre.php         # Página institucional
+├── contato.php       # Formulário de contato
+├── faq.php           # Perguntas frequentes
+├── privacidade.php   # Política de privacidade
 ├── gulpfile.js       # Config do Gulp
 ├── database.sql      # Estrutura do banco
 └── README.md         # Este arquivo
 
-🔒 Credenciais de Acesso
+🔒 Segurança
 
-Painel Administrativo:
+    Todas as páginas administrativas exigem autenticação
 
-    URL: /admin
+    Proteção básica contra SQL injection
 
-    Usuário: admin@revvo.com
-
-    Senha: admin123
+    Senhas armazenadas com hash (em ambiente de produção)
 
 📝 Licença
 
 Este projeto foi desenvolvido como parte de um processo seletivo e não possui licença aberta.
 ✉️ Contato
 
-Desenvolvedor: [Henrique Marcandier]
-Email: [henrique.marcandier@gmail.com](henrique.marcandier@gmail.com)
-LinkedIn: [[URL do LinkedIn](https://www.linkedin.com/in/henrique-marcandier-25492518/)]
-GitHub: [[URL do GitHub](https://github.com/henriquemarcandier/)]
-text
+Desenvolvedor: Henrique Marcandier
+Email: henrique.marcandier@gmail.com
+LinkedIn: https://www.linkedin.com/in/henrique-marcandier-25492518/
+GitHub: https://github.com/henriquemarcandier/
+Principais Atualizações:
 
+    Adicionada seção "Ambiente de Testes Online" com link para o subdomínio de testes
 
-### Key Features:
+    Atualizada estrutura de arquivos com as novas páginas criadas
 
-1. **Visão Geral Clara**:
-   - Explica o propósito do projeto
-   - Mostra as principais funcionalidades
+    Incluído CRUD de páginas estáticas na lista de funcionalidades
 
-2. **Tecnologias Organizadas**:
-   - Separa frontend, backend e ferramentas
-   - Lista versões importantes
+    Melhorada organização das seções
 
-3. **Instruções Detalhadas**:
-   - Passo a passo para configurar
-   - Inclui comandos prontos para copiar
+    Adicionadas informações de segurança básica
 
-4. **Estrutura Visual**:
-   - Diagrama de pastas fácil de entender
-   - Ícones para melhorar a leitura
-
-5. **Informações Úteis**:
-   - Credenciais de teste
-   - Dados de contato
-
-6. **Formatação Consistente**:
-   - Usa markdown corretamente
-   - Seções bem organizadas
-
-Este README fornece todas as informações necessárias para:
-- Entender o projeto
-- Configurar o ambiente
-- Navegar na estrutura de arquivos
-- Testar as funcionalidades
-- Entrar em contato com o desenvolvedor
+    Atualizadas as credenciais de acesso para o ambiente de testes
